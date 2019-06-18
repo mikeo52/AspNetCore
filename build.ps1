@@ -375,6 +375,8 @@ try {
     if ($ForceCoreMsbuild) {
         $global:KoreBuildSettings.MSBuildType = 'core'
     }
+
+    $global:VerbosePreference = 'Continue'
     Invoke-KoreBuildCommand 'default-build' @MSBuildArguments
 }
 finally {
